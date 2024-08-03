@@ -19,6 +19,37 @@ exports.getAllProducts = (req,res) => {
 }
 
 exports.createProduct = (req,res) => {
+    let { product_name, product_description , product_price} = req.body;
+    
+    if(product_name == ""){
+
+        let resData = {
+            status:0,
+            message:"product name can not be empty",
+            data:null
+        }
+        return res.json(resData);
+    }
+
+    if(product_description == ""){
+
+        let resData = {
+            status:0,
+            message:"product description can not be empty",
+            data:null
+        }
+        return res.json(resData);
+    }
+
+    if(product_price == ""){
+
+        let resData = {
+            status:0,
+            message:"product price can not be empty",
+            data:null
+        }
+        return res.json(resData);
+    }
 
     const inserData = {
         "product_name" : req.body.product_name,
@@ -49,6 +80,38 @@ exports.createProduct = (req,res) => {
 exports.updateProduct = (req,res) => {
 
     let id = req.params.id;
+
+    let { product_name, product_description , product_price} = req.body;
+    
+    if(product_name == ""){
+
+        let resData = {
+            status:0,
+            message:"product name can not be empty",
+            data:null
+        }
+        return res.json(resData);
+    }
+
+    if(product_description == ""){
+
+        let resData = {
+            status:0,
+            message:"product description can not be empty",
+            data:null
+        }
+        return res.json(resData);
+    }
+
+    if(product_price == ""){
+
+        let resData = {
+            status:0,
+            message:"product price can not be empty",
+            data:null
+        }
+        return res.json(resData);
+    }
    
     let updateData = {
         "product_name" : req.body.product_name,
