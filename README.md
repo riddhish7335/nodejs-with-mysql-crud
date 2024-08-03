@@ -1,4 +1,4 @@
-# nodejs-with-mysql-crud
+# nodejs API with mysql crud
 NodeJS API with MySQL Crud Operation
 ## How to run API
 
